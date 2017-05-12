@@ -52,11 +52,6 @@ public class QqqDeviceTest {
             mainPage.navigateToImagePage();
         }
 
-        @Test
-        public void quantityImages2() {
-            mainPage.navigateToImagePage();
-        }
-
 
 
 
