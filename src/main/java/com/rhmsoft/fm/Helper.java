@@ -8,10 +8,10 @@ import io.appium.java_client.AppiumDriver;
 public class Helper {
 
     AppiumDriver driver;
-
+/*
     public Helper(AppiumDriver driver) {
         this.driver = driver;
-    }
+    }*/
 
     public int qqqGetDeviceSNLength (String device) {
         int deviceLength = device.toUpperCase().length();

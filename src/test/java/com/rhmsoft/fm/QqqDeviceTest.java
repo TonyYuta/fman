@@ -22,6 +22,7 @@ public class QqqDeviceTest {
 
         AppiumDriver driver;
         MainPage mainPage;
+        Helper helper;
 
         @BeforeMethod
         public void setUp() throws Exception {
@@ -29,7 +30,12 @@ public class QqqDeviceTest {
 
             //MANDATORY
             capabilities.setCapability("deviceName", "AndroidTestDeviceNexus5");
-            capabilities.setCapability("app", "/Users/Yutaka/Documents/Mobile_Testing/Apk/com.rhmsoft.fm_v2.5.8-20580589_Android-4.0.apk");
+
+            //
+            // capabilities.setCapability("app", "/Users/Yutaka/Documents/Mobile_Testing/Apk/com.rhmsoft.fm_v2.5.8-20580589_Android-4.0.apk");
+            //capabilities.setCapability("app", "/Users/aolyva/Documents/MobileTesting/Apps/com.rhmsoft.fm_v2.5.8-20580589_Android-4.0.apk");
+            capabilities.setCapability("app", "/Users/aolyva/Documents/MobileTesting/Apps/fm.apk");
+
 
         /*
          * These two flags let you use already opened application
@@ -39,22 +45,29 @@ public class QqqDeviceTest {
             capabilities.setCapability("noReset", "true");
 
             driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
-            mainPage = new MainPage(driver);
+           // mainPage = new MainPage(driver);
+            helper = new Helper();
         }
 
-        @AfterMethod
-        public void tearDown() throws Exception {
-            driver.quit();
-        }
-
-        @Test
-        public void quantityImages() {
-            mainPage.navigateToImagePage();
-        }
-
-        }
-
-
-
-
+    @AfterMethod
+    public void tearDown() throws Exception {
+        driver.quit();
     }
+
+    @Test
+    public void quantityImages() {
+
+        mainPage.navigateToImagePage();
+
+        int qqqGetDeviceSNLengthTestResult;
+        qqqGetDeviceSNLengthTestResult =  helper.qqqGetDeviceSNLength("abc");
+    }
+
+
+
+
+
+
+
+
+}

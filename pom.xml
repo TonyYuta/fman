@@ -31,6 +31,7 @@
       <version>3.4.0</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
     <dependency>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-surefire-plugin</artifactId>
@@ -44,19 +45,45 @@
       <version>3.16.1</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+<!--
+
+
+
+    &lt;!&ndash; https://mvnrepository.com/artifact/io.appium/java-client &ndash;&gt;
     <dependency>
       <groupId>io.appium</groupId>
       <artifactId>java-client</artifactId>
       <version>4.1.2</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+-->
+
+<!--
+
+
+    &lt;!&ndash; https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server &ndash;&gt;
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-server</artifactId>
       <version>3.4.0</version>
     </dependency>
+
+
+
+-->
+
+
+
+<!--
+
+    &lt;!&ndash; https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server-standalone &ndash;&gt;
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-server-standalone</artifactId>
+      <version>2.53.0</version>
+    </dependency>
+
+-->
 
     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
     <dependency>
@@ -65,21 +92,7 @@
       <version>2.19.1</version>
     </dependency>
 
-
   </dependencies>
-<!--
-
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>2.19.1</version>
-      </plugin>
-    </plugins>
-  </reporting>
--->
-
 
   <build>
     <plugins>
@@ -96,9 +109,7 @@
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
-          <suiteXmlFiles>
-            <suiteXmlFile>src/test/java/testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
+
         </configuration>
         <executions>
           <execution>
@@ -109,6 +120,17 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.19.1</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
       </plugin>
 
       <plugin>
