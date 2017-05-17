@@ -34,8 +34,8 @@ public class ImageTest {
 
         //MANDATORY
         capabilities.setCapability("deviceName", "AndroidTestDeviceNexus5");
-       // capabilities.setCapability("app", "/Users/Yutaka/Documents/Mobile_Testing/Apk/com.rhmsoft.fm_v2.5.8-20580589_Android-4.0.apk");
-        capabilities.setCapability("app", "/Users/aolyva/Documents/MobileTesting/Apps/fm.apk");
+        capabilities.setCapability("app", "/Users/aolyva/Documents/MobileTesting/Apps/fm_v2.5.9-20590595_Android-4.0.apk");
+        // capabilities.setCapability("app", "/Users/aolyva/Documents/MobileTesting/Apps/fm.apk");
 
 
         /*
@@ -53,6 +53,9 @@ public class ImageTest {
     public void tearDown() throws Exception {
         driver.quit();
     }
+
+
+    /*--------------------Test Cases--------------------T*/
 
     @Test
     public void quantityImages() {
