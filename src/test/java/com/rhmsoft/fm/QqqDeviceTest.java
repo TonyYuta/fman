@@ -46,7 +46,7 @@ public class QqqDeviceTest {
 
             driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
            // mainPage = new MainPage(driver);
-            helper = new Helper();
+            helper = new Helper(driver);
         }
 
     @AfterMethod
@@ -61,6 +61,12 @@ public class QqqDeviceTest {
 
         int qqqGetDeviceSNLengthTestResult;
         qqqGetDeviceSNLengthTestResult =  helper.qqqGetDeviceSNLength("abc");
+    }
+
+    @Test
+    public void helperTest() {
+            int result = helper.qqqGetDeviceSNLength("abc");
+            System.out.println("result = " + result);
     }
 
 
