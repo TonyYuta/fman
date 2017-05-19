@@ -17,11 +17,6 @@ public class MainPage {
         this.driver = driver;
     }
 
-    public void navigateToImagePage_() {
-        WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
-        imageBtn.click();
-    }
-
     public void navigateToImagePage() {
         WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
         imageBtn.click();

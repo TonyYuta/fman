@@ -2,9 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Suite" parallel="classes">
     <test name="AndroidDevice01Test">
-        <parameter name="device" value="pixel" />
+        <parameter name="device" value="AndroidPhone" />
         <classes>
-            <class name="com.cheetahmobile.filemanager.tests.ImageTests"/>
+            <class name="com.rhmsoft.fm.ImageTest"/>
+            <class name="com.rhmsoft.fm.QqqDeviceTest"/>
         </classes>
     </test>
 </suite>
