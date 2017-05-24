@@ -5,7 +5,7 @@
         <parameter name="device" value="AndroidPhone" />
         <classes>
             <class name="com.rhmsoft.fm.ImageTest"/>
-            <class name="com.rhmsoft.fm.QqqDeviceTest"/>
+            <class name="com.rhmsoft.fm.HelperTest"/>
         </classes>
     </test>
 </suite>

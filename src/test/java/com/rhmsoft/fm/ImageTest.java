@@ -57,17 +57,17 @@ public class ImageTest {
 
     /*--------------------Test Cases--------------------T*/
 
-    @Test
+    @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
     public void quantityImages() {
         mainPage.navigateToImagePage();
     }
 
-    @Test
+    @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
     public void quantityImages2() {
         mainPage.navigateToImagePage();
     }
 
-    @Test
+    @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
     public void quantityImages3() {
         mainPage.navigateToImagePage();
     }
