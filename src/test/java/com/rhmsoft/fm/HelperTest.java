@@ -36,6 +36,7 @@ public class HelperTest {
         driver.quit();
     }
 
+    //
     @Test(enabled = true, groups={"Helper", "DryRun", "Regression"})
     public void helperTest() {
             int result = helper.qqqGetDeviceSNLength("abc");
