@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Suite" parallel="classes">
+<suite name="Suite" parallel="instances" thread-count="1" group-by-instances="true">
+<!--<suite name="Suite" parallel="classes">-->
     <test name="AndroidDevice01Test">
         <parameter name="device" value="AndroidPhone" />
         <classes>
-            <class name="com.rhmsoft.fm.ImageTest"/>
             <class name="com.rhmsoft.fm.HelperTest"/>
+            <class name="com.rhmsoft.fm.ImageTest"/>
         </classes>
     </test>
 </suite>

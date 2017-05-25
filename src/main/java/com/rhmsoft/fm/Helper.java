@@ -17,4 +17,8 @@ public class Helper {
         int deviceLength = device.toUpperCase().length();
         return deviceLength;
     }
+
+    public String deviceCapabilities(String testDevice) {
+        return "============== qqq ================";
+    }
 }
