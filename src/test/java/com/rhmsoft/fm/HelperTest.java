@@ -16,8 +16,8 @@ public class HelperTest extends Environment {
     //
     @Test(enabled = true, groups={"Helper", "DryRun", "Regression"})
     public void helperTest() {
-            int result = helper.qqqGetDeviceSNLength("abc");
-            System.out.println("result = " + result);
+        int result = helper.qqqGetDeviceSNLength("abc");
+        System.out.println("result = " + result);
     }
 
     @Test(enabled = true, groups = {"Helper", "DryRun", "Regression"})

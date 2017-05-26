@@ -4,14 +4,14 @@ package com.rhmsoft.fm;
  * Created by aolyva on 5/24/17.
  */
 
-      import java.net.URL;
-      import java.util.concurrent.TimeUnit;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
-      import org.openqa.selenium.remote.DesiredCapabilities;
-      import org.testng.annotations.AfterMethod;
-      import org.testng.annotations.BeforeMethod;
-      import io.appium.java_client.AppiumDriver;
-      import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 
 public class Environment {
 

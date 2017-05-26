@@ -8,11 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumDriver;
 
-<<<<<<< 06b0c77f84d19a6ff19ce01f8298008577a45960
-public class MainPage {
-
-    AppiumDriver driver;
-=======
 //import io.appium.java_client.android.BaseAndroidTest;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.WithTimeout;
@@ -30,25 +25,13 @@ public class MainPage {
 
     AppiumDriver driver;
     WebDriverWait wait;
->>>>>>> h intj
 
     public MainPage(AppiumDriver driver) {
 
         this.driver = driver;
     }
 
-<<<<<<< 06b0c77f84d19a6ff19ce01f8298008577a45960
-    public void navigateToImagePage_() {
-        WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
-        imageBtn.click();
-    }
-
-    public void navigateToImagePage() {
-        WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
-        imageBtn.click();
-=======
 /*    public void waitForScreenToLoad(AppiumDriver lDriver, WebElement element, int seconds){
-
         WebDriverWait wait = new WebDriverWait(lDriver,seconds);
         wait.until(ExpectedConditions.visibilityOf(element));
     }*/
@@ -65,7 +48,6 @@ public class MainPage {
 /*
         WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
         imageBtn.click();*/
->>>>>>> h intj
     }
 
 
