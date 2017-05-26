@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<<<<<<< 06b0c77f84d19a6ff19ce01f8298008577a45960
 <suite name="Suite" parallel="classes">
     <test name="AndroidDevice01Test">
         <parameter name="device" value="pixel" />
         <classes>
             <class name="com.cheetahmobile.filemanager.tests.ImageTests"/>
+=======
+<suite name="Suite" parallel="instances" thread-count="1" group-by-instances="true">
+<!--<suite name="Suite" parallel="classes">-->
+    <test name="AndroidDevice01Test">
+        <parameter name="device" value="AndroidPhone" />
+        <classes>
+            <class name="com.rhmsoft.fm.HelperTest"/>
+            <class name="com.rhmsoft.fm.ImageTest"/>
+>>>>>>> h intj
         </classes>
     </test>
 </suite>

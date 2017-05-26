@@ -1,7 +1,6 @@
 package com.rhmsoft.fm;
 
 /**
-<<<<<<< 06b0c77f84d19a6ff19ce01f8298008577a45960
  * Created by aolyva on 5/9/17.
  */
 
@@ -16,10 +15,21 @@ package com.rhmsoft.fm;
         import io.appium.java_client.AppiumDriver;
         import io.appium.java_client.android.AndroidDriver;
 
-public class ImageTest {
+public class ImageTest_old {
 
     AppiumDriver driver;
     MainPage mainPage;
+
+    public String getCapabilInfo() {
+        return capabilInfo;
+    }
+
+    public void setCapabilInfo(String newCapabilInfo) {
+        capabilInfo = newCapabilInfo;
+    }
+
+    // Capabilities
+    private String capabilInfo;
 
     @BeforeMethod
     public void setUp() throws Exception {
@@ -35,14 +45,17 @@ public class ImageTest {
 
         //MANDATORY
         capabilities.setCapability("deviceName", "AndroidTestDeviceNexus5");
-        capabilities.setCapability("app", "/Users/Yutaka/Documents/Mobile_Testing/Apk/com.rhmsoft.fm_v2.5.8-20580589_Android-4.0.apk");
+        capabilities.setCapability("app", "/Users/aolyva/Documents/MobileTesting/Apps/fm_v2.5.9-20590595_Android-4.0.apk");
 
         /*
          * These two flags let you use already opened application
          * (opened on the phone) without reinstalling or reopening it.
          */
         capabilities.setCapability("fullReset", "false");
+
         capabilities.setCapability("noReset", "true");
+        System.out.println("========== capabilities ========= : " + capabilities);
+
 
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
         mainPage = new MainPage(driver);
@@ -53,41 +66,19 @@ public class ImageTest {
         driver.quit();
     }
 
-    @Test
-=======
- * Created by aolyva on 5/24/17.
- */
-
-import org.testng.annotations.Test;
-
-public class ImageTest extends Environment {
-
 
     /*--------------------Test Cases--------------------T*/
 
     @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
->>>>>>> h intj
     public void quantityImages() {
         mainPage.navigateToImagePage();
     }
 
-<<<<<<< 06b0c77f84d19a6ff19ce01f8298008577a45960
-    @Test
-    public void quantityImages2() {
-        mainPage.navigateToImagePage();
-    }
-
-    @Test
-    public void quantityImages3() {
-        mainPage.navigateToImagePage();
-    }
-=======
     @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
     public void quantityImages2() {
     }
 
 
->>>>>>> h intj
 
 
 }
@@ -100,7 +91,3 @@ public class ImageTest extends Environment {
 
 
 
-<<<<<<< 06b0c77f84d19a6ff19ce01f8298008577a45960
-=======
-
->>>>>>> h intj
