@@ -4,7 +4,8 @@
     <test name="AndroidDevice01Test">
         <parameter name="device" value="pixel" />
         <classes>
-            <class name="com.cheetahmobile.filemanager.tests.ImageTests"/>
+            <class name="com.rhmsoft.fm.HelperTest"/>
+            <class name="com.rhmsoft.fm.ImageTest"/>
         </classes>
     </test>
 </suite>

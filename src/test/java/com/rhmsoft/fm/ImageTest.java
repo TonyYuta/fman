@@ -5,6 +5,8 @@ package com.rhmsoft.fm;
  */
 
 import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ImageTest extends Environment {
 
@@ -19,7 +21,6 @@ public class ImageTest extends Environment {
     @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
     public void quantityImages2() {
     }
-
 
 
 

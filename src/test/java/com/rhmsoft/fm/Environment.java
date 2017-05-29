@@ -51,7 +51,7 @@ public class Environment {
 
         //MANDATORY
         capabilities.setCapability("deviceName", "AndroidTestDeviceNexus5");
-        capabilities.setCapability("app", "/Users/aolyva/Documents/MobileTesting/Apps/fm_v2.5.9-20590595_Android-4.0.apk");
+        capabilities.setCapability("app", "/Users/Yutaka/Documents/Mobile_Testing/Apk/com.rhmsoft.fm_v2.5.8-20580589_Android-4.0.apk");
 
         /*
          * These two flags let you use already opened application
@@ -62,11 +62,10 @@ public class Environment {
         capabilities.setCapability("noReset", "true");
         System.out.println("========== capabilities ========= : " + capabilities);
 
-
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
 
         // implicit wait
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        // driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 
     }
