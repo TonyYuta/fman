@@ -48,8 +48,9 @@ public class MainPage {
        // WebDriverWait wait = new WebDriverWait(driver, 30);
       //  WebElement imageBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.rhmsoft.fm:id/home_classify_text_images")));
         imageBtn.click();
+        imageBtn.click();
 
-       // WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
+        // WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
        // imageBtn.click();
     }
 
