@@ -22,6 +22,10 @@ public class ImageTest extends Environment {
     public void quantityImages2() {
     }
 
+    @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
+    public void quantityImages3() {
+    }
+
 
 
 }
