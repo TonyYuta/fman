@@ -64,6 +64,8 @@ public class Environment {
 
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
 
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
         // implicit wait
         // driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 

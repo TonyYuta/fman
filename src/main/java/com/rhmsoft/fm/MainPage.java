@@ -19,8 +19,10 @@ public class MainPage {
     WebDriverWait wait;
 
     MainPage(AppiumDriver driver) {
-
         this.driver = driver;
+       // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+        //  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
 /*    public void waitForScreenToLoad(AppiumDriver lDriver, WebElement element, int seconds){
@@ -31,27 +33,38 @@ public class MainPage {
     /**
      * Test navigate to Image page
      */
-    public void navigateToImagePage() {
+    public void navigateToImagePage() throws NullPointerException {
 
-       // wait = new WebDriverWait(driver,20);
+       // wait = new WebDriverWait(driver,30);
        // WebElement imageBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.rhmsoft.fm:id/home_classify_text_images")));
        // imageBtn.click();
 
 
        // WebElement imageBtn=(WebElement) (new WebDriverWait(driver, 15)).until(ExpectedConditions.presenceOfElementLocated(By.id("com.rhmsoft.fm:id/home_classify_text_images")));
-       // WebElement imageBtn = driver.findElement(By.className("android.widget.EditText"));
-       // imageBtn.click();
+
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
+        imageBtn.click();
 
 
-        WebElement imageBtn;
-        imageBtn = (WebElement) (new WebDriverWait(driver, 15)).until(ExpectedConditions.presenceOfElementLocated(By.id("com.rhmsoft.fm:id/home_classify_text_images")));
+       // WebElement imageBtn;
+
+
+
+        //WebElement imageBtn = (WebElement) (new WebDriverWait(driver, 15)).until(ExpectedConditions.presenceOfElementLocated(By.id("com.rhmsoft.fm:id/home_classify_text_images")));
        // WebDriverWait wait = new WebDriverWait(driver, 30);
       //  WebElement imageBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.rhmsoft.fm:id/home_classify_text_images")));
-        imageBtn.click();
-        imageBtn.click();
+      //  imageBtn.click();
+      //  imageBtn.click();
 
-        // WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
-       // imageBtn.click();
+     //   driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+       // WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
+        //imageBtn.click();
     }
 
 

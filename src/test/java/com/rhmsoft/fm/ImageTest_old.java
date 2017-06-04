@@ -71,7 +71,7 @@ public class ImageTest_old {
     /*--------------------Test Cases--------------------T*/
 
     @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
-    public void quantityImages() {
+    public void quantityImages() throws InterruptedException {
         mainPage.navigateToImagePage();
     }
 
