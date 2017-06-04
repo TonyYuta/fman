@@ -60,21 +60,21 @@ public class ImageTest {
 
     /*--------------------Test Cases--------------------T*/
 
-    @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
+    @Test(enabled = true, groups={"images", "dryrun", "regression", "all"})
     public void quantityImages() throws NullPointerException {
        // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         mainPage.navigateToImagePage();
     }
 
-    @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
+    @Test(enabled = true, groups={"images", "dryrun", "regression", "all"})
     public void quantityImages2() {
     }
 
-    @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
+    @Test(enabled = true, groups={"images", "dryrun", "regression", "all"})
     public void quantityImages3() {
     }
 
-    @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
+    @Test(enabled = true, groups={"images", "dryrun", "regression", "all"})
     public void quantityImages4() {
     }
 

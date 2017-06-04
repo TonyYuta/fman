@@ -33,9 +33,11 @@ public class MainPage {
     /**
      * Test navigate to Image page
      */
-    public void navigateToImagePage() throws NullPointerException {
+//    public void navigateToImagePage() throws NullPointerException {
+    public void navigateToImagePage() {
 
-       // wait = new WebDriverWait(driver,30);
+
+            // wait = new WebDriverWait(driver,30);
        // WebElement imageBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.rhmsoft.fm:id/home_classify_text_images")));
        // imageBtn.click();
 
@@ -43,11 +45,15 @@ public class MainPage {
        // WebElement imageBtn=(WebElement) (new WebDriverWait(driver, 15)).until(ExpectedConditions.presenceOfElementLocated(By.id("com.rhmsoft.fm:id/home_classify_text_images")));
 
 //        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+       /*
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        */
+
         WebElement imageBtn = driver.findElement(By.id("com.rhmsoft.fm:id/home_classify_text_images"));
         imageBtn.click();
 
