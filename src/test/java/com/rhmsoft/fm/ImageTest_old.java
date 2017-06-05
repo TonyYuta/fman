@@ -18,7 +18,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class ImageTest_old {
 
     AppiumDriver driver;
-    MainPage mainPage;
+    HomePage homePage;
 
     public String getCapabilInfo() {
         return capabilInfo;
@@ -58,7 +58,7 @@ public class ImageTest_old {
 
 
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
-        mainPage = new MainPage(driver);
+        homePage = new HomePage(driver);
     }
 
     @AfterMethod
@@ -72,7 +72,7 @@ public class ImageTest_old {
 
     @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
     public void quantityImages() throws InterruptedException {
-        mainPage.navigateToImagePage();
+        homePage.navigateToImagePage();
     }
 
     @Test(enabled = true, groups={"Images", "DryRun", "Regression"})

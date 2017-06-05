@@ -16,7 +16,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class Environment {
 
     AppiumDriver driver;
-    MainPage mainPage;
+    HomePage homePage;
     Helper helper;
 
     public String getCapabilInfo() {
@@ -34,7 +34,7 @@ public class Environment {
     public void setUp() throws Exception {
 
         // creating instance of MainPage class
-        mainPage = new MainPage(driver);
+        homePage = new HomePage(driver);
 
         // creating instance of Helper class
         helper = new Helper(driver);

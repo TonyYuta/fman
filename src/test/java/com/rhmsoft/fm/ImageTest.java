@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 public class ImageTest {
 
     AppiumDriver driver;
-    MainPage mainPage;
+    HomePage homePage;
     Helper helper;
 
     public String getCapabilInfo() {
@@ -35,11 +35,6 @@ public class ImageTest {
 
     @BeforeMethod
     public void setUp() throws Exception {
-        // creating instance of MainPage class
-        mainPage = new MainPage(driver);
-
-        // creating instance of Helper class
-        helper = new Helper(driver);
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "AndroidTestDeviceNexus5");
@@ -49,6 +44,12 @@ public class ImageTest {
 
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+        // creating instance of HomePage class
+        homePage = new HomePage(driver);
+
+        // creating instance of Helper class
+        helper = new Helper(driver);
     }
 
     @AfterMethod
@@ -57,13 +58,11 @@ public class ImageTest {
     }
 
 
-
     /*--------------------Test Cases--------------------T*/
 
     @Test(enabled = true, groups={"images", "dryrun", "regression", "all"})
     public void quantityImages() throws NullPointerException {
-       // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        mainPage.navigateToImagePage();
+        homePage.navigateToImagePage();
     }
 
     @Test(enabled = true, groups={"images", "dryrun", "regression", "all"})
