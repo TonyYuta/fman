@@ -1,5 +1,7 @@
 package com.rhmsoft.fm;
 
+import io.appium.java_client.AppiumDriver;
+
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,33 +19,71 @@ import java.util.Properties;
  */
 public class ExtData {
 
+    AppiumDriver driver;
+
+
+    // xpath
+    String searchBtnXpath;
+    String homeBtnXpath;
+    String recentBtnXPath;
+
+    // id
+    String recentBtn;
+    String homeBtn;
+    String imageBtn;
+    String audioBtn;
+    String videoBtn;
+    String docBtn;
+    String deviceBtn;
+    String largeFilesBtn;
+    String unnecessaryFilesBtn;
+    String usedApkBtn;
+    String installedAppsBtn;
+    String allFilesBtn;
+    String hotAppsNearby;
+
+
     /**
-     * @throws FileNotFoundException
+     * @throws IOException
      */
-    public ExtData() throws FileNotFoundException {
+    ExtData() throws IOException {
 
+        // Specify the file location I used . operation here because
+        //we have object repository inside project directory only
         File file = new File("src/main/resources/locators.properties");
-        FileInputStream fileInput = null;
 
-        try {
-            fileInput = new FileInputStream(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        // Create  FileInputStream object
+        FileInputStream fis = new FileInputStream(file);
 
-        Properties prop = new Properties();
+        // Create Properties class object to read properties file
+        Properties pro = new Properties();
 
-        //load properties file
-        try {
-            prop.load(fileInput);
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
+        pro.load(fis);
+
+        // xpath
+         searchBtnXpath = pro.getProperty("searchBtnXpathLoc");
+         homeBtnXpath = pro.getProperty("homeBtnXpathLoc");
+         recentBtnXPath = pro.getProperty("recentBtnXPathLoc");
+
+        // id
+         recentBtn = pro.getProperty("recentBtnLoc");
+         homeBtn = pro.getProperty("homeBtnLoc");
+         imageBtn = pro.getProperty("imageBtnLoc");
+         audioBtn = pro.getProperty("audioBtnLoc");
+         videoBtn = pro.getProperty("videoBtnLoc");
+         docBtn = pro.getProperty("docBtnLoc");
+         deviceBtn = pro.getProperty("deviceBtnLoc");
+         largeFilesBtn = pro.getProperty("largeFilesBtnLoc");
+         unnecessaryFilesBtn = pro.getProperty("unnecessaryFilesBtnLoc");
+         usedApkBtn = pro.getProperty("usedApkBtnLoc");
+         installedAppsBtn = pro.getProperty("installedAppsBtnLoc");
+         allFilesBtn = pro.getProperty("allFilesBtnLoc");
+         hotAppsNearby = pro.getProperty("hotAppsNearbyLoc");
+
+        System.out.println("====================== ExtData 1 ==========================");
+
 
     }
-
-
-
 
 
 

@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +22,7 @@ public class ImageTest {
     AppiumDriver driver;
     HomePage homePage;
     Helper helper;
+    ExtData extData;
 
     public String getCapabilInfo() {
         return capabilInfo;
@@ -50,10 +52,13 @@ public class ImageTest {
 
         // creating instance of Helper class
         helper = new Helper(driver);
+
+        // creating instance of ExtData class
+        extData = new ExtData();
     }
 
     @AfterMethod
-    public void tearDown() throws Exception {
+    public void tearDown() throws IOException {
         driver.quit();
     }
 
@@ -61,8 +66,9 @@ public class ImageTest {
     /*--------------------Test Cases--------------------T*/
 
     @Test(enabled = true, groups={"images", "dryrun", "regression", "all"})
-    public void quantityImages() throws NullPointerException {
-        homePage.navigateToImagePage();
+    public void quantityImages() throws NullPointerException, IOException {
+        homePage.navigateToImagePageExt();
+
     }
 
     @Test(enabled = true, groups={"images", "dryrun", "regression", "all"})

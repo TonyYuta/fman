@@ -4,6 +4,7 @@ package com.rhmsoft.fm;
  * Created by aolyva on 5/9/17.
  */
 
+import java.io.IOException;
 import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
@@ -46,6 +47,7 @@ public class ImageTest_old {
         //MANDATORY
         capabilities.setCapability("deviceName", "AndroidTestDeviceNexus5");
         capabilities.setCapability("app", "/Users/aolyva/Documents/MobileTesting/Apps/fm_v2.5.9-20590595_Android-4.0.apk");
+        //capabilities.setCapability("app", "/Users/aolyva/Documents/MobileTesting/Apps/20580589.apk");
 
         /*
          * These two flags let you use already opened application
@@ -71,8 +73,8 @@ public class ImageTest_old {
     /*--------------------Test Cases--------------------T*/
 
     @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
-    public void quantityImages() throws InterruptedException {
-        homePage.navigateToImagePage();
+    public void quantityImages() throws InterruptedException, IOException {
+        homePage.navigateToImagePageExt();
     }
 
     @Test(enabled = true, groups={"Images", "DryRun", "Regression"})
